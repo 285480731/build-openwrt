@@ -23,7 +23,10 @@ echo "DISTRIB_SOURCECODE='Lienol'" >>package/base-files/files/etc/openwrt_releas
 # ------------------------------- Other started -------------------------------
 #
 # Add luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
+#svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
+echo 'src-git smpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
+echo 'src-git mihomo https://github.com/morytyann/OpenWrt-mihomo.git;main' >>feeds.conf.default
+#echo 'src-git amlogic https://github.com/ophub/luci-app-amlogic' >>feeds.conf.default
 
 # coolsnowwolf default software package replaced with Lienol related software package
 # rm -rf feeds/packages/utils/{containerd,libnetwork,runc,tini}
